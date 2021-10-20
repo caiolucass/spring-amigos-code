@@ -2,6 +2,7 @@ package com.example.springCourse.student;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -9,17 +10,20 @@ import java.util.List;
 
 @RestController
 @RequestMapping(path = "api/v1/student")
-public class studentController {
+public class StudentController {
 
-    private final studentService studentService;
+    private final StudentService studentService;
 
     @Autowired()
-    public studentController(studentService studentService) {
+    public StudentController(StudentService studentService) {
         this.studentService = studentService;
     }
 
     @GetMapping
-    public List<student> getStudents(){
+    public List<Student> getStudents(){
         return studentService.getStudents();
     }
+
+    @GetMapping("/findByName/{name}")
+    public List<Student> getStudentByNameIgnoreCase(@PathVariable("name") String name) {return studentService.getStudentByName(name);}
 }
