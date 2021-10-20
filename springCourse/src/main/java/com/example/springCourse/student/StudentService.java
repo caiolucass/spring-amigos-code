@@ -19,9 +19,4 @@ public class StudentService {
     public  List<Student> getStudents(){
         return studentRepository.findAll();
     }
-
-    //retorna o usuário pelo nome sem casesensitivity
-    public List<Student> getStudentByName(String name){
-        return studentRepository.findByNameIgnoreCase(name);
-    }
 }

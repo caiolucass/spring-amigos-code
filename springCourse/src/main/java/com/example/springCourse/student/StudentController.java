@@ -23,7 +23,4 @@ public class StudentController {
     public List<Student> getStudents(){
         return studentService.getStudents();
     }
-
-    @GetMapping("/findByName/{name}")
-    public List<Student> getStudentByNameIgnoreCase(@PathVariable("name") String name) {return studentService.getStudentByName(name);}
 }

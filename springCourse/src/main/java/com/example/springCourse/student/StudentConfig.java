@@ -17,14 +17,12 @@ public class StudentConfig {
             Student Caio = new Student(
                     "Caio Lucas",
                     "caio@gmail.com",
-                    LocalDate.of(1998, Month.SEPTEMBER, 28),
-                    23
+                    LocalDate.of(1998, Month.SEPTEMBER, 28)
             );
             Student Joao = new Student(
                     "João Reis",
                     "joao@gmail.com",
-                    LocalDate.of(1998, Month.NOVEMBER, 11),
-                    23
+                    LocalDate.of(1998, Month.NOVEMBER, 11)
             );
 
             //salva no banco, os estudantes criados
