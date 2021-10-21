@@ -66,7 +66,7 @@ public class Student {
         this.dob = dob;
     }
 
-    //calcula a idade automaticamente de
+    //calcula a idade automaticamente
     public Integer getAge() {
         return Period.between(this.dob, LocalDate.now()).getYears();
     }
